@@ -1,12 +1,20 @@
-import { Controller, Get } from '@nestjs/common';
-import { AppService } from './app.service';
+import { Controller, Get, UseGuards } from '@nestjs/common';
+import { Roles } from './auth/roles.decorator';
+import { RolesGuard } from './auth/roles.guard';
+import { Role } from './auth/role.enum';
 
-@Controller()
+@Controller('app')
+@UseGuards(RolesGuard)
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+  @Get('admin')
+  @Roles(Role.Admin)
+  getAdminContent() {
+    return 'This is admin content';
+  }
 
-  @Get()
-  getHello(): string {
-    return this.appService.getHello();
+  @Get('user')
+  @Roles(Role.User)
+  getUserContent() {
+    return 'This is user content';
   }
 }
