@@ -1,46 +1,58 @@
-# Getting Started with Create React App
+# VOD Shared Experience Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+La **VOD Shared Experience Platform** est une application interactive qui permet aux utilisateurs de créer et de partager des playlists de vidéos dans des "ROOMs". Les utilisateurs peuvent collaborer en temps réel, regarder des vidéos synchronisées et interagir avec d'autres participants.
 
-In the project directory, you can run:
+## Fonctionnalités
 
-### `npm start`
+- **Gestion des playlists** :
+  - Créer, lire, mettre à jour et supprimer des playlists de vidéos.
+  - Partager des playlists dans des ROOMs pour une période définie.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Gestion des ROOMs** :
+  - Créer, lire, mettre à jour et supprimer des ROOMs.
+  - Inviter des participants par email.
+  - Accepter ou refuser les participants.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **Diffusion et synchronisation des vidéos** :
+  - Diffuser des vidéos en direct et synchroniser la lecture pour tous les participants.
+  - Interagir avec les autres membres présents dans la ROOM.
 
-### `npm test`
+- **Push-to-Talk** :
+  - Fonctionnalité permettant aux utilisateurs de s’exprimer ou de commenter pendant la session.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Notifications** :
+  - Notifications par email avant le début de la session.
+  - Messages d'erreur si un participant tente de rejoindre une ROOM avant l'heure prévue.
+  - Messages informant que la session est terminée une fois la diffusion terminée.
 
-### `npm run build`
+## Technologies Utilisées
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Front-end** :
+  - React.js (TypeScript)
+  - Tailwind CSS
+  - Axios
+  - React-Player
+  - Redux
+  - Socket.IO
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Back-end** :
+  - NestJS
+  - Socket.IO
+  - Nodemailer
+  - class-validator
+  - MongoDB (mongoose)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Prérequis
 
-### `npm run eject`
+- Node.js
+- npm ou yarn
+- MongoDB
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Installation
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. **Cloner le dépôt** :
+   ```sh
+   git clone https://github.com/sanaahamliri/WatchTogether.git
+   cd vod-platform
